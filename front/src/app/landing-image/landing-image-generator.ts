@@ -17,9 +17,11 @@ export function GetLandingImage(): LandingImageInfo {
 
 interface LandingImageInfo {
     landingImgPath: string,
-    landingImgCredits: {
-        authorHref: string,
-        authorName: string,
-        siteHref: string
-    }
+    landingImgCredits: LandingImageCredits
+}
+
+export interface LandingImageCredits {
+    authorHref: string,
+    authorName: string,
+    siteHref: string
 }
