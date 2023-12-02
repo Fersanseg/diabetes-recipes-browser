@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { GetLandingImage } from './landing-image/landing-image-generator';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent{
+export class AppComponent implements OnInit {
+  public landingImg: string = "";
   
+  ngOnInit(): void {
+    const landing = GetLandingImage();
+    this.landingImg = landing.landingImgPath;
+  }
 }

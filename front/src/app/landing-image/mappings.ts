@@ -1,4 +1,4 @@
-{
+export const IMG_MAP = {
     "food1": {
         "author": {
             "link": "https://visualhunt.co/a7/5fe707b9",
